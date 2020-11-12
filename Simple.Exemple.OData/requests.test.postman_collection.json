@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "3ab3124b-a99c-4724-9ec8-cbffe906b240",
+		"name": "Simple.Exemple.OData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register_book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Books\": [\n\t\t {\n\t    \"Name\": \"Book 1\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},\n{\n\t    \"Name\": \"Book 2\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 3\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 4\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 5\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 6\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 7\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 8\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 9\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 10\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 11\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 12\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 13\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 14\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 15\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 16\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 17\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 18\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 19\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n},{\n\t    \"Name\": \"Book 20\",\n        \"ISBN\": \"1\",\n        \"Author\": \"Matheus M\",\n        \"CollectionId\": 1\n}\n\t\n\t\n\t]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/book",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/book",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_book_white_filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/book?$select=name,Id&$orderby=name&filter",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "name,Id"
+						},
+						{
+							"key": "$orderby",
+							"value": "name"
+						},
+						{
+							"key": "filter",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_collection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"0001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/collection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_collections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/collection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_colletions_and_books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/collection(1)?$expand=books($select=Name)&$select=Name, Books&$search.in(",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"collection(1)"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "books($select=Name)"
+						},
+						{
+							"key": "$select",
+							"value": "Name, Books"
+						},
+						{
+							"key": "$search.in(",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_book_pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/book?$select=name,Id&$orderby=name&$skip=5&$top=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"book"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "name,Id"
+						},
+						{
+							"key": "$orderby",
+							"value": "name"
+						},
+						{
+							"key": "$skip",
+							"value": "5"
+						},
+						{
+							"key": "$top",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
