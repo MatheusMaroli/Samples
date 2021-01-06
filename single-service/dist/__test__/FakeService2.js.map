@@ -1,0 +1,1 @@
+{"version":3,"file":"FakeService2.js","sourceRoot":"","sources":["../../src/__test__/FakeService2.ts"],"names":[],"mappings":";;AAAA,wCAAkD;AAOlD,MAAqB,YAAY;IAI7B;QACI,IAAI,CAAC,kBAAkB,GAAG,IAAI,+BAAqB,EAAyB,CAAC;IACjF,CAAC;IAGD,iBAAiB;QACb,OAAO,CAAC,GAAG,CAAC,0BAA0B,CAAC,CAAC;IAC5C,CAAC;CACJ;AAZD,+BAYC"}

@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const __1 = require("../");
+const FakeService_1 = require("./FakeService");
+const FakeService2_1 = require("./FakeService2");
+const service = __1.SingleServiceControl.register(FakeService_1.default);
+const service2 = __1.SingleServiceControl.register(FakeService_1.default);
+service.counterProperty.setListener(counter => console.log(`counter is ${counter}`));
+service.setValue();
+service.setValue();
+service.setValue();
+service.setValue();
+service.setValue();
+const value = service2.getValue();
+console.log(`value deve ser 5. Value: ===> ${value}`);
+__1.SingleServiceControl.unregister(FakeService_1.default);
+__1.SingleServiceControl.unregister(FakeService_1.default);
+const service3 = __1.SingleServiceControl.register(FakeService_1.default);
+console.log(`value deve ser 0. Value: ===> ${service3.getValue()}`);
+const fakeService2 = __1.SingleServiceControl.register(FakeService2_1.default);
+fakeService2.counterWithDisplay.setListener(counter => console.log(`${counter.key}${counter.value}`));
+fakeService2.counterWithDisplay.setValueAndNotify({ ...fakeService2.counterWithDisplay.value, key: 'I am Counter with display. My number is: ', value: 0 });
+fakeService2.counterWithDisplay.setValueAndNotify({ ...fakeService2.counterWithDisplay.value, key: 'I am Counter with display. My number is: ', value: 1 });
+fakeService2.counterWithDisplay.setValueAndNotify({ ...fakeService2.counterWithDisplay.value, key: 'I am Counter with display. My number is: ', value: 2 });
+fakeService2.counterWithDisplay.setValueAndNotify({ ...fakeService2.counterWithDisplay.value, key: 'I am Counter with display. My number is: ', value: 3 });
+__1.SingleServiceControl.unregister(FakeService2_1.default);
+//# sourceMappingURL=index.js.map
