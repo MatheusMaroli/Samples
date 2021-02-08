@@ -7,7 +7,7 @@ namespace Juro.Calculo.Api.Services
 {
     public class GitService
     {
-        private const string UrlRepositorio = "https://github.com/MatheusMaroli";
+        private const string UrlRepositorio = "https://github.com/MatheusMaroli/Samples/tree/main/Culculo.Api";
         public string RepositorioProjeto()
         {
             return UrlRepositorio;

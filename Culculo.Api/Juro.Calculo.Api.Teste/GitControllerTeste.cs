@@ -21,7 +21,7 @@ namespace Juro.Calculo.Api.Teste
             var apiResposta = (ApiResposta<Git>)respostaController.Value;
 
             Assert.True(apiResposta.Valido);
-            Assert.True(apiResposta.Dados.Url == "xxxx");
+            Assert.True(apiResposta.Dados.Url == "https://github.com/MatheusMaroli/Samples/tree/main/Culculo.Api");
         }
     }
 }

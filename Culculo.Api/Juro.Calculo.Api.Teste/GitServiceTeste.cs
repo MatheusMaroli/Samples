@@ -15,7 +15,7 @@ namespace Juro.Calculo.Api.Teste
         {
             var gitService = new GitService();
             var urlObtida = gitService.RepositorioProjeto();
-            var urlEsperada = "xxxx";
+            var urlEsperada = "https://github.com/MatheusMaroli/Samples/tree/main/Culculo.Api";
             Assert.Equal(urlEsperada, urlObtida);
         }
     }
