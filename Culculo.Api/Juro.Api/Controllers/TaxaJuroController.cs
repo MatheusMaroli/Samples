@@ -23,7 +23,7 @@ namespace Juro.Api.Controllers
             }
             catch(Exception e)
             {
-                Console.WriteLine($"Falha no controller TaxaJuro para executar o método Index. Falha ===> {e.ToString()}");
+                Console.WriteLine($"Falha no controller TaxaJuro para executar o método TaxaJuroUmPorcento. Falha ===> {e.ToString()}");
                 resposta.SetMensagem("Falha para recupera taxa de juro.");
                 resposta.SetInvalido();
                 return BadRequest(resposta);

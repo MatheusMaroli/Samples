@@ -17,9 +17,21 @@ namespace Juro.Calculo.Api.Controllers
         public IActionResult ShowMeTheCode()
         {
             var resposta = new ApiResposta<Models.Git>();
-            var gitService = new GitService();
-            resposta.Dados = new Models.Git() { Url = gitService.RepositorioProjeto() };
-            return Ok(resposta);
+            try
+            {                
+                var gitService = new GitService();
+                resposta.Dados = new Models.Git() { Url = gitService.RepositorioProjeto() };
+                return Ok(resposta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Falha no controller GitController para executar o método ShowMeTheCode. Falha ===> {e.ToString()}");
+                resposta.SetMensagem("Falha para recupera caminho do github.");
+                resposta.SetInvalido();
+                return BadRequest(resposta);
+
+            }
+        
         }
     }
 }
