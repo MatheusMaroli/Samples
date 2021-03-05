@@ -1,0 +1,7 @@
+<h1> Main List! </h1>
+<p *ngFor="let main of vm.data"> {{ main.id }} - {{ main.name }}</p>
+<hr/>
+<h2>Add Main</h2>
+<input [(ngModel)]="vm.currentMain.id"  name="id" placeholder="add one Id">
+<input [(ngModel)]="vm.currentMain.name" name="name" placeholder="add one name">
+<button (click)="vm.addCurrentMain()">Add</button>
